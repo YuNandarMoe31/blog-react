@@ -1,16 +1,17 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar bg="dark" variant="dark" fixed="top">
       <Container>
         <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Add Blogs</Nav.Link>
+            <NavLink to="/" className={({isActive}) => isActive ? 'mx-2 text-decoration-none text-primary' : 'mx-2 text-decoration-none text-light'}>Home</NavLink>
+            <NavLink to="add-blogs" className={({isActive}) => isActive ? 'mx-2 text-decoration-none text-primary' : 'mx-2 text-decoration-none text-light'}>Add Blogs</NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
