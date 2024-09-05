@@ -1,15 +1,12 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 
-const Blog = () => {
+const Blog = ({ blog }) => {
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
+        <Card.Title>{blog.title}</Card.Title>
+        <Card.Text>{blog.description}</Card.Text>
         <Button variant="primary">View</Button>
       </Card.Body>
     </Card>
