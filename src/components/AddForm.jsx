@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { api } from "../api";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router";
+import { initialState, reducer } from "../reducer";
+import { ActionType } from "../reducer/ActionType";
 
 const AddForm = () => {
 
   const {register, handleSubmit, watch, formState : {errors}} = useForm()
   const [isLoading, setIsLoading] = useState(false)
+  const [state, dispatch] = useReducer(reducer, initialState)
 
   const navigate = useNavigate()
 
@@ -16,10 +19,13 @@ const AddForm = () => {
     setIsLoading(true)
     data = {id : uuidv4(), ...data}
     const res = await api.post('/blogs', data)
+
+    dispatch({type : ActionType.ADD_BLOG, payload : res.data})
+
     setIsLoading(false)
     navigate('/')
 
-    // console.log(res)
+    console.log(res)
   }
   return (
     <Container style={{

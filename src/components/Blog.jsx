@@ -1,13 +1,14 @@
 import React from "react";
-import { Button, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Blog = ({ blog }) => {
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Body>
         <Card.Title>{blog.title}</Card.Title>
-        <Card.Text>{blog.description}</Card.Text>
-        <Button variant="primary">View</Button>
+        <Card.Text>{blog.description.substring(0,100)+'...'}</Card.Text>
+        <Link className="btn btn-primary" to={`/blogs/${blog.id}`}>View</Link>
       </Card.Body>
     </Card>
   );
