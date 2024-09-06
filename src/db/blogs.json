@@ -1,14 +1,24 @@
 {
-    "blogs" : [
-        {
-            "id": 1,
-            "title": "Blog 1",
-            "description": "Some quick example text to build on the card title and make up the bulk of the card's content."
-        },
-        {
-            "id": 2,
-            "title": "Blog 2",
-            "description": "Some quick example text to build on the card title and make up the bulk of the card's content."
-        }
-    ]
+  "blogs": [
+    {
+      "id": "1",
+      "title": "Blog 1",
+      "description": "Some quick example text to build on the card title and make up the bulk of the card's content."
+    },
+    {
+      "id": "2",
+      "title": "Blog 2",
+      "description": "Some quick example text to build on the card title and make up the bulk of the card's content."
+    },
+    {
+      "id": "fc71a6e7-7057-4372-96eb-55f40c0a7de1",
+      "title": "Quia doloremque null",
+      "description": "In sed voluptatum li"
+    },
+    {
+      "id": "937df386-8fcb-41a6-b962-45dced2c9baa",
+      "title": "Amet ad elit dicta",
+      "description": "Nihil enim ipsam non"
+    }
+  ]
 }

@@ -23,7 +23,7 @@ const Home = () => {
     <Container
       fluid
       style={{
-        marginTop: "30px",
+        marginTop: "80px",
       }}
     >
       <Row>
